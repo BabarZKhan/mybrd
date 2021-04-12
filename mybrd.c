@@ -15,7 +15,7 @@
 */
 
 
-#include <linux/init.h>
+#include <linux/init.h> 
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/major.h>
@@ -725,6 +725,6 @@ static void __exit mybrd_exit(void)
 	pr_warn("brd: module unloaded\n");
 }
 
-module_init(mybrd_init);
-module_exit(mybrd_exit);
+module_init(mybrd_init); //entry point  of the driver
+module_exit(mybrd_exit); //exit  point  of the driver
 
