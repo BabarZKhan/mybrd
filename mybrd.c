@@ -8,6 +8,13 @@
  * of their respective owners.
  */
 
+
+/*
+ * As the name suggests, RAM disk is a kind of disk that stores data in memory (RAM).
+ * You can think it as a mimic of the hard-disk but we will lose the data after reboot
+*/
+
+
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
