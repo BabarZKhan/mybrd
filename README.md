@@ -1,15 +1,19 @@
-This is a forked repo for my underatanding of MQ-BLK driver. Original author and developer ia this: https://github.com/gurugio
+This is a forked repo for my underatanding of MQ-BLK driver. 
 
-However, meanwhile I have added my comments in the original code and documents for better understanding.
+Original author and developer of the code is here : https://github.com/gurugio
+
+This repo contains Index of main documents.
+
+These documents are evolving. It means I have added additional comments and resources for better understanding.
 
 
 # Multi-queue block device in Linux kernel v4.4
 
-Some years ago, a new concept was merged into the block layer of Linux kernel. Before that every single block device has one queue for IO handling. Every processes inserted an IO request into the queue and block device driver extract a request from the queue. Yes, one queue was shared for many processes and for many processors.
+Since 2013/2014, a new concept has been implemented in the block layer of Linux kernel. Before that every single block device has one queue for IO handling. Every processes inserted an IO request into the queue and block device driver extract a request from the queue. Yes, one queue was shared for many processes and for many processors.
 
 When we used HDD mainly, a single queue did not matter. But these days SSD is so popular that a single queue design has been bottle-neck of performance. Therefore kernel developers implemented the multi-queue design.
 
-That is not just an adding more queues. The architecture of block layer must've re-designed. You can get the theoritical background from this paper: 
+Following are the scientific references of multi-queue block driver: 
 
 > Bjørling, Matias, et al. "Linux block IO: Introducing multi-queue SSD access on multi-core systems." Proceedings of the 6th International Systems and Storage Conference. ACM, 2013. - http://kernel.dk/systor13-final18.pdf
 
